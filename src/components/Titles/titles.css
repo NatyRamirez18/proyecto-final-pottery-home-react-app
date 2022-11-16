@@ -1,0 +1,12 @@
+h1{
+	margin: 2rem;
+	color: rgb(200,250, 200);
+}
+
+h2{
+	
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	color: rgb(200,250, 21);
+}

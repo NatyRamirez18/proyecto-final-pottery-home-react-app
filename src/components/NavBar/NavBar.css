@@ -1,0 +1,23 @@
+.lista{
+	text-decoration: none;
+	list-style: none;
+
+}
+
+.nav-bg{
+	background-color: #bae4b5;
+}
+
+.nav-flex{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	justify-items: flex-end;
+
+	
+}
+
+a{
+	color: rgb(200,250, 200);;
+}
+
