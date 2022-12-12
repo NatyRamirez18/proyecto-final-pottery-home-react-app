@@ -10,7 +10,7 @@ function Loader() {
 <div className='text-center'>
 <DotSpinner 
  size={40}
- speed={0.9} 
+ speed={0.3} 
  color= "grey"
  
 />
