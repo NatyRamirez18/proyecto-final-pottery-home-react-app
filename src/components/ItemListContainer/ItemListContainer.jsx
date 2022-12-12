@@ -1,48 +1,47 @@
 import { useState, useEffect } from 'react';
-
-
-import Item from './Item';
 import "./Item.css";
-import products from '../../data/data';
-import getItems from '../../services/mockService';
-
+import  {getItemsByCategory, orderedGetItems} from '../../services/firestore';
 import {useParams} from 'react-router-dom';
+import ItemList from './ItemList';
+import Loader from '../loader/Loader';
+
+
 
 function ItemListContainer() {
-	const [products, setProducts] = useState([]);
-	const {id2}= useParams();
+	const [products, setProducts] = useState(null);
+	const {idCategory}= useParams();
+
+	
 
 	async function getItemsAsync(){
-		let respuesta= await getItems(id2);
-		setProducts(respuesta);
+		if(!idCategory){
+			let response= await orderedGetItems();
+			setProducts(response);
+		}
+		else{
+			let response= await getItemsByCategory(idCategory);
+			setProducts(response);
+		}
+		
 	}
 
 	useEffect(()=>{
 		getItemsAsync(); 
-			
-		}, [id2]);
+	 }, [idCategory]);
 
-	return (
-		<div className=" card py-5">
-			{
-			products.map((product)=>{
-				return(
-					<Item
-					key={product.id} 
+	 return (
+		
 
-					id={product.id}
-					title={product.title}
-					imgurl={product.thumbnail}
-					price={product.price}
-					category={product.category}
-					stock={product.stock}
-					/>
+		<div className='card text-center w-50 '>
+		  {products ? <ItemList className='mt-5' products={products} /> : <Loader  />}
 
-
-				);
-			})}
 		</div>
-	);
-}
+	  );
+	
+			
+			
+	}
+
+
 
 export default ItemListContainer;

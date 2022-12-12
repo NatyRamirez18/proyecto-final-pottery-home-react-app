@@ -2,6 +2,7 @@ const products= [{
     "id": 1,
     "title": "WhiteMug",
     "price": 5972,
+    "discount":"10%",
     "stock": 42,
     "category": "Breakfast",
     "thumbnail": "https://www.potiershome.com.ar/imagenes/productos/2015-05/1278-ok3.jpg"
@@ -9,6 +10,7 @@ const products= [{
     "id": 2,
     "title": "WhiteCup",
     "price": 13098,
+    "discount":"15%",
     "stock": 97,
     "category": "Breakfast",
     "thumbnail": "https://www.potiershome.com.ar/imagenes/productos/2015-05/1280-ok2.jpg"
@@ -16,7 +18,7 @@ const products= [{
     "id": 3,
     "title": "WhiteCoffee",
     "price": 5505,
-    "stock": 31,
+    "stock": 0,
     "category": "Breakfast",
     "thumbnail": "https://www.potiershome.com.ar/imagenes/productos/2015-05/1281-ok2.jpg"
   }, {

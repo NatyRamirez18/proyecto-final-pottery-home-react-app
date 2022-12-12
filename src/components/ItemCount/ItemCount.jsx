@@ -1,26 +1,37 @@
-import React from 'react';
-import "../MyButton/MyButton.css";
-import products from '../../data/data';
+import React, { useState } from "react";
+import ButtonAll from "../ButtonAll/ButtonAll";
 
-function ItemCount(props) {
-    let[ count, setCount] = React.useState(1)
-function handleAdd(){
-    if (count < products.stock)
-    setCount(count+1);
-}
-function handleMinus(){
-    if (count > 1)
-    setCount(count-1);
-}
+function ItemCount({ stock, onAddToCart }) {
+  const [count, setCount] = useState(1);
+
+  function handleAdd() {
+    if (count < stock) setCount(count + 1);
+  }
+
+  function handleSubstract() {
+    if (count > 1) setCount(count - 1);
+  }
+
   return (
-    <div>
-    <button onClick={handleMinus} className='button rounded'>-</button>
-    <span>{count}</span>
-    <button onClick={handleAdd} className='button rounded'>+</button>
-    <br />
-    <button className='button rounded'>Agregar al carrito</button>
+    <div className="itemcount_container">
+      <div className="itemcount_control">
+        <ButtonAll colorBtn="red" onTouchButton={handleSubstract}>
+          -
+        </ButtonAll>
+        <span>{count}</span>
+        <ButtonAll colorBtn="green" onTouchButton={handleAdd}>
+          +
+        </ButtonAll>
+      </div>
+      <div className="itemcount_btns">
+        <ButtonAll onTouchButton={() => onAddToCart(count)}>
+          Add to cart
+        </ButtonAll>
+      </div>
     </div>
-  )
+  );
 }
 
-export default ItemCount
+export default ItemCount;
+
+

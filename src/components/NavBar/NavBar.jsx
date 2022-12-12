@@ -20,7 +20,7 @@ function NavBar() {
         <Link to="/category/Combos" className="nav-link px-3">Combos</Link>
         <Link className="nav-link px-3" to="/category/Christmas">Christmas</Link>
          <Link className="nav-link px-3" to="/category/Glass">Glass</Link>
-        <Link className="nav-link px-3" to="/"> <CartWidget /><span>0</span></Link>
+        <Link className="nav-link px-3" to="/cart"><span> <CartWidget /></span></Link>
 		
         
       </div>
