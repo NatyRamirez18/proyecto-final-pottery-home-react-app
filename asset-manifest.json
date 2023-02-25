@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/proyecto-final-pottery-home-react-app/static/css/main.3fa02f16.css",
+    "main.js": "/proyecto-final-pottery-home-react-app/static/js/main.f867b290.js",
+    "static/js/787.494eb739.chunk.js": "/proyecto-final-pottery-home-react-app/static/js/787.494eb739.chunk.js",
+    "index.html": "/proyecto-final-pottery-home-react-app/index.html",
+    "main.3fa02f16.css.map": "/proyecto-final-pottery-home-react-app/static/css/main.3fa02f16.css.map",
+    "main.f867b290.js.map": "/proyecto-final-pottery-home-react-app/static/js/main.f867b290.js.map",
+    "787.494eb739.chunk.js.map": "/proyecto-final-pottery-home-react-app/static/js/787.494eb739.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3fa02f16.css",
+    "static/js/main.f867b290.js"
+  ]
+}
